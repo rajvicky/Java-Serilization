@@ -13,9 +13,13 @@ class EngineObject implements Serializable{
     /**
 	 *
 	 */
-	private static final long serialVersionUID = 1L;
-	int a=1;
-    int b=3;
+    private static final long serialVersionUID = 1L;
+    /** If you don't want to store a variables inside file declare transient variable */
+	//transient int a=1;
+    //transient int b=3;
+    int a=1;
+    int b=2;
+    static int st=4;
 }
 class Serilization1{
     public static void main(String []args) throws IOException ,ClassNotFoundException {
@@ -28,7 +32,7 @@ class Serilization1{
         FileInputStream fis=new FileInputStream(f);
         ObjectInputStream Obin=new ObjectInputStream(fis);
         EngineObject d=(EngineObject) Obin.readObject();
-        System.out.println(d.a+" "+d.b);
+        System.out.println(d.a+" "+d.b+d.st);
         Obin.close();
         System.out.println("Hello");    
     }
