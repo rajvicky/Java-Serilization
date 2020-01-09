@@ -13,3 +13,4 @@ Can be moved;
 int i=5 here 5 is Rvalue.
 int j=i+i;rvalue i+1;
 x=foo(10) foo is rvalue
+it's represnt by &&
