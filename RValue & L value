@@ -1,0 +1,15 @@
+LValue: A value is reside insides in memory (heap and stacks):
+Lvalue can't movable and is addressable.
+Example:
+int i=5; here I is Lvalue because is resides in memory.
+int *p=&i is possible but
+int *p=&5 is not possible.
+Class A{}
+A a; is Lvalue.
+Rvalue:
+A value that's not lvalue .
+It resides only on the right side of an assignment expression such as a literal or a temporary which is intended to be non modifiable.
+Can be moved;
+int i=5 here 5 is Rvalue.
+int j=i+i;rvalue i+1;
+x=foo(10) foo is rvalue
